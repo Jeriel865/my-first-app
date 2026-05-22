@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PromptFoundry | AI prompt and learning hub</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="topbar__inner">
+        <a class="brand" href="#repo-home">PromptFoundry</a>
+
+        <nav class="topnav" aria-label="Primary">
+          <a href="#repo-home">Home</a>
+          <a href="#learn">Learn</a>
+          <a href="#explore">Explore</a>
+          <a href="#submit">Contribute</a>
+        </nav>
+
+        <div class="topbar__actions">
+          <button type="button" class="button button--ghost-top" id="browse-cta">Explore hub</button>
+          <button type="button" class="button button--top-primary" id="submit-cta">
+            Publish a repo
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <section class="app-header" aria-labelledby="app-header-title">
+      <div class="app-header__inner">
+        <div class="app-header__copy">
+          <p class="app-header__eyebrow">AI for people who want to learn</p>
+          <h2 id="app-header-title">Prompts, guides, and workflows. Finally in one place.</h2>
+          <p class="app-header__lede">
+            PromptFoundry brings prompt libraries, educational tracks, and practical AI resources
+            into one fast, approachable workspace for builders, teachers, teams, and curious beginners.
+          </p>
+        </div>
+
+        <div class="app-header__meta" aria-label="Workspace summary">
+          <div class="app-header__meta-item">
+            <span>Mode</span>
+            <strong>Community hub</strong>
+          </div>
+          <div class="app-header__meta-item">
+            <span>Storage</span>
+            <strong>Local JSON backend</strong>
+          </div>
+          <div class="app-header__meta-item">
+            <span>Best for</span>
+            <strong>Prompts + learning</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <main class="shell" id="repo-home">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero__copy">
+          <p class="repo-path">promptfoundry / <span>learn-build-share</span></p>
+          <h1 id="hero-title">Everything AI. Organized for people who want to learn and build.</h1>
+          <p class="hero__lede">
+            Explore reusable prompts like templates, move into guided AI learning paths, and publish
+            what works so the next person can move faster too.
+          </p>
+
+          <div class="hero__badges" aria-label="What the hub offers">
+            <span class="hero-badge">Prompt repositories</span>
+            <span class="hero-badge">Learning paths</span>
+            <span class="hero-badge">Resource library</span>
+            <span class="hero-badge">Community publishing</span>
+          </div>
+
+          <div class="hero__search">
+            <label class="search-card" for="search-input">
+              <span class="search-card__label">Search repositories</span>
+              <input
+                id="search-input"
+                type="search"
+                placeholder="Search prompts, guides, tags, models, or maintainers"
+                autocomplete="off"
+              />
+            </label>
+
+            <label class="sort-control" for="sort-select">
+              <span>Sort</span>
+              <select id="sort-select">
+                <option value="trending">Trending</option>
+                <option value="newest">Newest</option>
+                <option value="starred">Most starred</option>
+                <option value="copied">Most used</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="hero__stats" id="hero-stats" aria-label="Repository statistics"></div>
+
+          <div class="repo-tabs" aria-label="Repository views">
+            <a class="repo-tab is-active" href="#explore">Repositories</a>
+            <a class="repo-tab" href="#learn">Learn AI</a>
+            <a class="repo-tab" href="#submit">New repository</a>
+          </div>
+
+          <p class="hero__note" id="hero-note">
+            Local app mode: repositories, stars, and usage stats sync with the backend on localhost.
+          </p>
+
+          <div class="hero__social-proof" aria-label="Who this is for">
+            <span>For educators</span>
+            <span>For founders</span>
+            <span>For operators</span>
+            <span>For curious beginners</span>
+          </div>
+        </div>
+
+        <aside class="hero__spotlight" aria-labelledby="spotlight-title">
+          <div class="panel-header">
+            <p class="panel-header__eyebrow">Start here</p>
+            <h2 id="spotlight-title">Featured workspace</h2>
+          </div>
+          <div id="hero-featured"></div>
+        </aside>
+      </section>
+
+      <section class="learn" id="learn" aria-labelledby="learn-title">
+        <div class="learn__header">
+          <div>
+            <p class="eyebrow">Learn AI</p>
+            <h2 id="learn-title">Educational resources for people ready to learn.</h2>
+            <p class="section-copy">
+              Guided tracks for newcomers, builders, teachers, and operators plus a curated library
+              of practical AI guides, playbooks, and checklists.
+            </p>
+          </div>
+
+          <div class="learn-summary" id="learn-summary"></div>
+        </div>
+
+        <div class="learn__grid">
+          <section class="learn-panel" aria-labelledby="tracks-title">
+            <div class="feed-header feed-header--compact">
+              <h3 id="tracks-title">Learning paths</h3>
+              <p id="tracks-count"></p>
+            </div>
+            <div class="learning-paths" id="learning-paths"></div>
+          </section>
+
+          <section class="learn-panel" aria-labelledby="resources-title">
+            <div class="feed-header feed-header--compact">
+              <h3 id="resources-title">Resource library</h3>
+              <p id="resources-count"></p>
+            </div>
+            <div class="resource-library" id="resource-library"></div>
+          </section>
+        </div>
+      </section>
+
+      <section class="explore" id="explore" aria-labelledby="explore-title">
+        <div class="workspace">
+          <aside class="sidebar" aria-label="Filters and trends">
+            <div class="sidebar-card">
+              <div class="panel-header">
+                <p class="panel-header__eyebrow">Filter</p>
+                <h2 class="sidebar-title">Topics</h2>
+              </div>
+              <p class="sidebar-copy">
+                Narrow the feed like a repository topic index.
+              </p>
+              <div class="category-strip" id="category-strip" aria-label="Prompt categories"></div>
+            </div>
+
+            <div class="pulse-card">
+              <div class="panel-header">
+                <p class="panel-header__eyebrow">Community</p>
+                <h3>Pulse</h3>
+              </div>
+              <div id="community-pulse"></div>
+            </div>
+          </aside>
+
+          <div class="feed-column">
+            <div class="section-head">
+              <div>
+                <p class="eyebrow">Explore repositories</p>
+                <h2 id="explore-title">Prompt feed</h2>
+                <p class="section-copy" id="results-label">
+                  Search across reusable prompts, agent workflows, classroom templates, and launch kits.
+                </p>
+              </div>
+            </div>
+
+            <section class="prompt-feed" aria-labelledby="feed-title">
+              <div class="feed-header">
+                <h3 id="feed-title">All repositories</h3>
+                <p id="results-count"></p>
+              </div>
+
+              <div class="prompt-list" id="prompt-list"></div>
+
+              <div class="empty-state" id="empty-state" hidden>
+                <h3>No repositories match this search.</h3>
+                <p>Try a broader keyword, switch topics, or publish the first repository for that niche.</p>
+              </div>
+            </section>
+          </div>
+
+          <aside class="detail-panel" aria-labelledby="detail-title">
+            <div class="panel-header">
+              <p class="panel-header__eyebrow">Repository</p>
+              <h3 id="detail-title">README and prompt</h3>
+            </div>
+            <div id="detail-content"></div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="submit" id="submit" aria-labelledby="submit-title">
+        <div class="submit__intro">
+          <p class="eyebrow">Create repository</p>
+          <h2 id="submit-title">Publish a new prompt repo</h2>
+          <p class="section-copy">
+            Package one prompt, a clear README-style summary, and usage notes so other builders can
+            review it, star it, and fork it into their own workflows.
+          </p>
+
+          <div class="pulse-card">
+            <div class="panel-header">
+              <p class="panel-header__eyebrow">Maintainer notes</p>
+              <h3>What a strong repo includes</h3>
+            </div>
+
+            <ul class="guidelines">
+              <li>One clear job for the prompt, not a grab-bag of outputs.</li>
+              <li>Model guidance, assumptions, and expected output shape.</li>
+              <li>Tags that behave like searchable repository topics.</li>
+            </ul>
+          </div>
+        </div>
+
+        <form class="prompt-form" id="prompt-form">
+          <p class="form-remix" id="form-remix" hidden>
+            Forking an existing repository.
+            <button type="button" id="clear-remix">Clear source</button>
+          </p>
+
+          <label class="field field--wide" for="prompt-title">
+            <span>Repository name</span>
+            <input
+              id="prompt-title"
+              name="title"
+              type="text"
+              maxlength="80"
+              placeholder="launch-review-copilot"
+              required
+            />
+          </label>
+
+          <div class="field-grid">
+            <label class="field" for="prompt-author">
+              <span>Maintainer</span>
+              <input
+                id="prompt-author"
+                name="author"
+                type="text"
+                maxlength="40"
+                placeholder="Your name"
+                required
+              />
+            </label>
+
+            <label class="field" for="prompt-model">
+              <span>Recommended model</span>
+              <input
+                id="prompt-model"
+                name="model"
+                type="text"
+                list="model-suggestions"
+                maxlength="60"
+                placeholder="GPT-4.1 / o3"
+                required
+              />
+            </label>
+          </div>
+
+          <div class="field-grid">
+            <label class="field" for="prompt-category">
+              <span>Primary topic</span>
+              <input
+                id="prompt-category"
+                name="category"
+                type="text"
+                list="category-suggestions"
+                maxlength="40"
+                placeholder="Operations"
+                required
+              />
+            </label>
+
+            <label class="field" for="prompt-tags">
+              <span>Topics</span>
+              <input
+                id="prompt-tags"
+                name="tags"
+                type="text"
+                maxlength="120"
+                placeholder="ops, status-page, summaries"
+                required
+              />
+            </label>
+          </div>
+
+          <label class="field field--wide" for="prompt-summary">
+            <span>README summary</span>
+            <textarea
+              id="prompt-summary"
+              name="summary"
+              rows="3"
+              maxlength="220"
+              placeholder="Describe the outcome this prompt repository helps someone produce."
+              required
+            ></textarea>
+          </label>
+
+          <label class="field field--wide" for="prompt-body">
+            <span>`prompt.md`</span>
+            <textarea
+              id="prompt-body"
+              name="body"
+              rows="10"
+              placeholder="Paste the reusable prompt here..."
+              required
+            ></textarea>
+          </label>
+
+          <label class="field field--wide" for="prompt-notes">
+            <span>Usage notes</span>
+            <textarea
+              id="prompt-notes"
+              name="notes"
+              rows="4"
+              maxlength="320"
+              placeholder="Explain inputs, constraints, expected outputs, and when to fork it."
+              required
+            ></textarea>
+          </label>
+
+          <div class="form-actions">
+            <button type="submit" class="button button--primary">Publish repository</button>
+            <button type="reset" class="button button--ghost" id="reset-form">Reset form</button>
+          </div>
+
+          <p class="form-note" id="form-note">
+            New repositories appear immediately in the feed and persist in this browser.
+          </p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <div class="site-footer__brand">
+          <a class="brand brand--footer" href="#repo-home">PromptFoundry</a>
+          <p>
+            Open prompt hub for browsing, starring, forking, and publishing reusable AI prompt repositories.
+          </p>
+        </div>
+
+        <div class="site-footer__nav">
+          <div class="site-footer__group">
+            <h3>Navigate</h3>
+            <a href="#learn">Learn</a>
+            <a href="#explore">Explore</a>
+            <a href="#submit">Publish</a>
+            <a href="#repo-home">Top</a>
+          </div>
+
+          <div class="site-footer__group">
+            <h3>Repository</h3>
+            <span>Prompt + learning hub</span>
+            <span>Superlist-inspired product design</span>
+            <span>Prompt-first catalog</span>
+          </div>
+
+          <div class="site-footer__group">
+            <h3>Notes</h3>
+            <span>Saved stars persist in this browser</span>
+            <span>Repositories persist in the local backend data file</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <datalist id="category-suggestions"></datalist>
+    <datalist id="model-suggestions"></datalist>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

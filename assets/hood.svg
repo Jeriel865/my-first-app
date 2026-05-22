@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-labelledby="title desc">
+  <title id="title">Shadow hood</title>
+  <desc id="desc">A hooded assassin mask symbol.</desc>
+  <path d="M60 13c22 0 39 24 42 56-12-11-27-17-42-17S30 58 18 69c3-32 20-56 42-56Z" fill="#d9d2bd"/>
+  <path d="M22 81c8-18 21-31 38-31s30 13 38 31L84 107H36L22 81Z" fill="#191919"/>
+  <path d="M42 73c8-6 28-6 36 0-3 10-9 16-18 16s-15-6-18-16Z" fill="#050505"/>
+  <path d="M42 70h36l-8 10H50l-8-10Z" fill="#b3152a"/>
+  <path d="M36 61c8-7 16-10 24-10s16 3 24 10c-9-18-17-27-24-27S45 43 36 61Z" fill="#fff7d8" opacity=".35"/>
+</svg>

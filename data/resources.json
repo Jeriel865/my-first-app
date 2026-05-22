@@ -1,0 +1,122 @@
+{
+  "tracks": [
+    {
+      "id": "ai-fundamentals",
+      "title": "AI Fundamentals",
+      "level": "Beginner",
+      "duration": "90 min",
+      "lessons": 5,
+      "summary": "Learn what models, tokens, context windows, reasoning, and multimodal workflows actually mean in practice.",
+      "outcomes": [
+        "Understand the core language of modern AI systems",
+        "Know when to use chat, vision, or structured outputs",
+        "Build a mental model for prompts, inputs, and limits"
+      ],
+      "topics": ["basics", "models", "tokens", "multimodal"]
+    },
+    {
+      "id": "prompt-engineering",
+      "title": "Prompt Engineering Studio",
+      "level": "Beginner to Intermediate",
+      "duration": "2 hours",
+      "lessons": 6,
+      "summary": "Practice writing prompts that create reliable outputs across summarization, planning, teaching, and marketing tasks.",
+      "outcomes": [
+        "Write stronger system, user, and task prompts",
+        "Use examples, constraints, and output formats effectively",
+        "Debug weak prompts and iterate with intent"
+      ],
+      "topics": ["prompting", "examples", "formats", "iteration"]
+    },
+    {
+      "id": "agents-and-automation",
+      "title": "Agents and Automation",
+      "level": "Intermediate",
+      "duration": "2.5 hours",
+      "lessons": 6,
+      "summary": "Move from one-off prompts to repeatable agent workflows, tool use, and human-in-the-loop automations.",
+      "outcomes": [
+        "Understand how agents plan, call tools, and recover from failures",
+        "Design workflows that mix prompts with real business systems",
+        "Choose where humans should review or approve outcomes"
+      ],
+      "topics": ["agents", "automation", "tools", "workflows"]
+    },
+    {
+      "id": "evaluation-and-safety",
+      "title": "Evaluation and Safety",
+      "level": "Intermediate",
+      "duration": "75 min",
+      "lessons": 4,
+      "summary": "Learn how to judge output quality, create simple evals, and reduce risk when AI is used in real decisions.",
+      "outcomes": [
+        "Create practical output checks and evaluation rubrics",
+        "Spot hallucinations, overreach, and fragile prompt patterns",
+        "Use safer workflows for learning, support, and operations"
+      ],
+      "topics": ["evals", "safety", "quality", "risk"]
+    }
+  ],
+  "resources": [
+    {
+      "id": "glossary-core-concepts",
+      "title": "AI Glossary: Core Concepts",
+      "type": "Guide",
+      "level": "Beginner",
+      "format": "Read",
+      "summary": "A plain-language walkthrough of models, embeddings, agents, fine-tuning, evals, reasoning, and tool use.",
+      "bestFor": "People who are new to AI vocabulary and want a low-friction starting point.",
+      "topics": ["glossary", "fundamentals", "terminology"]
+    },
+    {
+      "id": "prompt-patterns-playbook",
+      "title": "Prompt Patterns Playbook",
+      "type": "Playbook",
+      "level": "Beginner to Intermediate",
+      "format": "Hands-on",
+      "summary": "Reusable prompt structures for planning, extraction, role prompting, critique loops, teaching, and transformations.",
+      "bestFor": "Builders who want practical prompt scaffolds they can adapt immediately.",
+      "topics": ["prompting", "patterns", "examples"]
+    },
+    {
+      "id": "agent-architecture-notes",
+      "title": "Agent Architecture Notes",
+      "type": "Deep dive",
+      "level": "Intermediate",
+      "format": "Read",
+      "summary": "Explains memory, tool routing, error recovery, approvals, and how small agents differ from larger orchestrated systems.",
+      "bestFor": "People designing AI workflows that need reliability, not just clever outputs.",
+      "topics": ["agents", "architecture", "tool-use"]
+    },
+    {
+      "id": "classroom-ai-starter-kit",
+      "title": "Classroom AI Starter Kit",
+      "type": "Starter kit",
+      "level": "Beginner",
+      "format": "Templates",
+      "summary": "A bundle of lesson ideas, rubric prompts, feedback helpers, and classroom-safe guidelines for teachers and tutors.",
+      "bestFor": "Educators who want to use AI responsibly for planning and feedback.",
+      "topics": ["education", "teaching", "lesson-plans"]
+    },
+    {
+      "id": "evaluation-checklist",
+      "title": "Output Evaluation Checklist",
+      "type": "Checklist",
+      "level": "Intermediate",
+      "format": "Worksheet",
+      "summary": "A practical rubric for checking accuracy, completeness, structure, tone, and risk before AI outputs go live.",
+      "bestFor": "Teams that want a repeatable review layer before using outputs externally.",
+      "topics": ["evaluation", "quality", "review"]
+    },
+    {
+      "id": "build-your-first-ai-workflow",
+      "title": "Build Your First AI Workflow",
+      "type": "Tutorial",
+      "level": "Beginner to Intermediate",
+      "format": "Step-by-step",
+      "summary": "A start-to-finish walkthrough for turning one useful prompt into a repeatable workflow with inputs, checks, and outputs.",
+      "bestFor": "Anyone who has used AI casually and wants to build something durable next.",
+      "topics": ["workflow", "automation", "beginner-builds"]
+    }
+  ]
+}

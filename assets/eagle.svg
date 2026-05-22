@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-labelledby="title desc">
+  <title id="title">Eagle sigil</title>
+  <desc id="desc">A sharp eagle sigil symbol for the assassin reels.</desc>
+  <defs>
+    <linearGradient id="wing" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f3ead0"/>
+      <stop offset=".5" stop-color="#d9d2bd"/>
+      <stop offset="1" stop-color="#8da09c"/>
+    </linearGradient>
+  </defs>
+  <path d="M14 62c18-26 34-39 50-39 17 0 31 12 42 35-17-9-33-12-49-8-16 3-31 7-43 12Z" fill="url(#wing)"/>
+  <path d="M16 68c25-7 47-9 66-4 11 3 21 8 30 15-21-2-38 2-52 12-17-9-32-16-44-23Z" fill="#101713"/>
+  <path d="M54 43c8-12 18-18 32-18-5 7-7 15-6 24 9-1 18 1 28 7-18 2-32 9-43 20-1-13-5-24-11-33Z" fill="#f3ead0"/>
+  <path d="M64 72c10-8 20-14 31-17l-13 20 21 3c-17 6-31 13-43 23 4-11 5-21 4-29Z" fill="#00e6d0"/>
+  <path d="M29 70c12 10 24 18 38 24l-10 11c-18-10-33-22-44-37l16 2Z" fill="#ffd166"/>
+  <path d="M45 82h30l-15 18-15-18Z" fill="#b3152a"/>
+  <circle cx="86" cy="40" r="4" fill="#b3152a"/>
+</svg>

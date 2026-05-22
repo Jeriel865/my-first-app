@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-labelledby="title desc">
+  <title id="title">Contract scroll</title>
+  <desc id="desc">A sealed contract symbol.</desc>
+  <path d="M29 22h56c8 0 14 6 14 14v51c0 6-5 11-11 11H32c-7 0-12-5-12-12V31c0-5 4-9 9-9Z" fill="#f0e3bd"/>
+  <path d="M29 22c8 0 14 7 14 15v48c0 8-5 13-11 13-7 0-12-5-12-12V31c0-5 4-9 9-9Z" fill="#d7c48f"/>
+  <path d="M55 40h28M55 55h27M55 70h18" stroke="#32302a" stroke-width="5" stroke-linecap="round"/>
+  <path d="m68 82 10-10 10 10-10 10-10-10Z" fill="#b3152a"/>
+  <circle cx="78" cy="82" r="6" fill="#d2a646"/>
+  <path d="M31 34c7 4 7 13 0 18" stroke="#fff7d8" stroke-width="4" fill="none" opacity=".7"/>
+</svg>
